@@ -23,10 +23,14 @@ puts "Let's fight !"
 while player1.life_points > 0 && player2.life_points > 0
 	player1.attacks(player2)
 	player2.attacks(player1)
-	if player1.life_points == 0 || player2.life_points == 0
+	if player1.life_points == 0 || player2.life_points == 0 || main_player.life_points == 0
 		break
 	end
 end
+if main_player.life_points == 0
+	puts "Congratulations, you've won !"
+elsif player1.life_points == 0 || player2.life_points == 0
+	puts "Sorry, you lose. Game over."
 
 puts "======================="
 
